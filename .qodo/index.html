@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LENNQUIP HEALTHCARE LTD | Medical, Laboratory, Dental & Optical Supplies</title>
+    <meta name="description" content="LENNQUIP HEALTHCARE LTD - Medical, laboratory, dental and optical supplies. Request a quotation via WhatsApp.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0879b9;
+            --primary-dark: #075985;
+            --secondary: #06a6c7;
+            --green: #16a34a;
+            --dark: #0f172a;
+            --text: #334155;
+            --muted: #64748b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --white: #ffffff;
+            --danger: #dc2626;
+            --shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+            --radius: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            background: #f5f9fc;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            max-width: 1440px;
+            margin: auto;
+            min-height: 78px;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+            box-shadow: 0 7px 18px rgba(8,121,185,.22);
+        }
+
+        .brand-text h1 {
+            font-size: 20px;
+            line-height: 1.15;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .brand-text span {
+            display: block;
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-info {
+            text-align: right;
+        }
+
+        .phone-info strong {
+            display: block;
+            color: var(--dark);
+            font-size: 14px;
+        }
+
+        .phone-info span {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .cart-button {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border: 0;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            cursor: pointer;
+            font-size: 21px;
+            transition: .2s ease;
+        }
+
+        .cart-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(8,121,185,.25);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            min-width: 23px;
+            height: 23px;
+            padding: 0 6px;
+            border-radius: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: var(--danger);
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            border: 2px solid white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(6,166,199,.22), transparent 30%),
+                linear-gradient(135deg, #063b5c, #0879b9 55%, #06a6c7);
+            color: white;
+        }
+
+        .hero-inner {
+            max-width: 1440px;
+            margin: auto;
+            padding: 68px 24px;
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h2 {
+            max-width: 750px;
+            font-size: clamp(32px, 5vw, 58px);
+            line-height: 1.06;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: rgba(255,255,255,.9);
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-badge {
+            padding: 8px 13px;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.1);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            color: white;
+            transition: background .2s ease, border-color .2s ease, transform .15s ease;
+        }
+
+        .hero-badge:hover {
+            background: rgba(255,255,255,.22);
+            border-color: rgba(255,255,255,.55);
+            transform: translateY(-2px);
+        }
+
+        .hero-badge:active {
+            transform: translateY(0);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 20px;
+            padding: 28px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-card-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero-card h3 {
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* =========================
+           CONTROLS
+        ========================= */
+
+        .catalogue {
+            max-width: 1440px;
+            margin: auto;
+            padding: 45px 24px 70px;
+        }
+
+        .catalogue-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .catalogue-heading h2 {
+            color: var(--dark);
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+
+        .catalogue-heading p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .search-box {
+            width: min(370px, 100%);
+            position: relative;
+        }
+
+        .search-box span {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+        }
+
+        .search-box input {
+            width: 100%;
+            height: 46px;
+            padding: 0 16px 0 42px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 10px;
+            outline: none;
+            transition: .2s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(8,121,185,.1);
+        }
+
+        .filters {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter {
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text);
+            border-radius: 999px;
+            padding: 9px 17px;
+            cursor: pointer;
+            font-weight: 650;
+            font-size: 13px;
+            transition: .2s ease;
+        }
+
+        .filter:hover {
+            border-color: #9bd4ed;
+            color: var(--primary);
+        }
+
+        .filter.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            transition: .25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: #b7dff0;
+        }
+
+        .product-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: #eef5f8;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.035);
+        }
+
+        .category {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 2;
+            background: rgba(255,255,255,.94);
+            color: var(--primary-dark);
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+        }
+
+        .product-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-body h3 {
+            color: var(--dark);
+            font-size: 16px;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+
+        .product-body p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 17px;
+        }
+
+        .product-actions {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .btn {
+            min-height: 42px;
+            border: 0;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: 750;
+            font-size: 13px;
+            transition: .2s ease;
+        }
+
+        .btn-inquiry {
+            color: white;
+            background: linear-gradient(135deg, #0879b9, #06a6c7);
+        }
+
+        .btn-inquiry:hover {
+            box-shadow: 0 6px 15px rgba(8,121,185,.22);
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            background: #16a34a;
+        }
+
+        .btn-whatsapp:hover {
+            background: #15803d;
+        }
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 70px 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .empty div {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .empty h3 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .empty p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           TRUST STRIP
+        ========================= */
+
+        .trust-strip {
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-inner {
+            max-width: 1440px;
+            margin: auto;
+            padding: 25px 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #e9f6fb;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .trust-item strong {
+            display: block;
+            color: var(--dark);
+            font-size: 13px;
+        }
+
+        .trust-item span {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =========================
+           CART DRAWER
+        ========================= */
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(15,23,42,.55);
+            opacity: 0;
+            visibility: hidden;
+            transition: .25s ease;
+        }
+
+        .overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .drawer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: min(470px, 100%);
+            background: white;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: .3s ease;
+        }
+
+        .overlay.open .drawer {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            padding: 20px;
+            color: white;
+            background: linear-gradient(135deg, #0879b9, #06a6c7);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .drawer-header h2 {
+            font-size: 20px;
+        }
+
+        .close {
+            width: 38px;
+            height: 38px;
+            border: 0;
+            background: rgba(255,255,255,.15);
+            color: white;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 18px;
+        }
+
+        .cart-empty {
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .cart-empty-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .cart-row {
+            display: grid;
+            grid-template-columns: 70px 1fr auto;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+        }
+
+        .cart-row img {
+            width: 70px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 9px;
+            background: #eef5f8;
+        }
+
+        .cart-row h4 {
+            color: var(--dark);
+            font-size: 13px;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .qty button {
+            width: 27px;
+            height: 27px;
+            border: 1px solid var(--border);
+            background: #f8fafc;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        .qty span {
+            min-width: 25px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .delete {
+            border: 0;
+            background: none;
+            color: var(--danger);
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .drawer-footer {
+            border-top: 1px solid var(--border);
+            padding: 20px;
+            background: #f8fafc;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .checkout {
+            width: 100%;
+            min-height: 48px;
+            border: 0;
+            border-radius: 10px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .checkout:hover {
+            background: #15803d;
+        }
+
+        .checkout:disabled {
+            background: #cbd5e1;
+            cursor: not-allowed;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0f172a;
+            color: white;
+        }
+
+        .footer-inner {
+            max-width: 1440px;
+            margin: auto;
+            padding: 50px 24px 30px;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        footer p,
+        footer li {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 4px;
+        }
+
+        .footer-bottom {
+            max-width: 1440px;
+            margin: auto;
+            padding: 20px 24px;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+            .products-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .header-inner {
+                padding: 12px 15px;
+            }
+
+            .phone-info {
+                display: none;
+            }
+
+            .catalogue {
+                padding: 35px 15px 55px;
+            }
+
+            .catalogue-heading {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 13px;
+            }
+
+            .product-image {
+                height: 185px;
+            }
+
+            .product-body {
+                padding: 14px;
+            }
+
+            .product-body h3 {
+                font-size: 14px;
+            }
+
+            .trust-inner {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 22px 15px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 15px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-text h1 {
+                font-size: 16px;
+            }
+
+            .brand-text span {
+                font-size: 10px;
+            }
+
+            .brand-mark {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            .cart-button {
+                width: 42px;
+                height: 42px;
+            }
+
+            .hero-inner {
+                padding: 48px 18px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 230px;
+            }
+
+            .trust-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <div class="brand">
+            <div class="brand-mark">✚</div>
+
+            <div class="brand-text">
+                <h1>LENNQUIP HEALTHCARE LTD</h1>
+                <span>Quality Medical Solutions</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+
+            <div class="phone-info">
+                <strong>0700396520</strong>
+                <span>WhatsApp Available</span>
+            </div>
+
+            <button class="cart-button" onclick="openCart()" aria-label="Open inquiry list">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div>
+            <h2>Professional Healthcare Supplies You Can Rely On</h2>
+
+            <p>
+                Explore our medical, laboratory, dental and optical supply catalogue.
+                Select the products you need and send your inquiry directly to LennQuip
+                Medical Supplies through WhatsApp.
+            </p>
+
+            <div class="hero-badges">
+                <button class="hero-badge" onclick="filterAndScroll('Medical')">🩺 Medical Supplies</button>
+                <button class="hero-badge" onclick="filterAndScroll('Laboratory')">🔬 Laboratory Equipment</button>
+                <button class="hero-badge" onclick="filterAndScroll('Dental')">🦷 Dental Supplies</button>
+                <button class="hero-badge" onclick="filterAndScroll('Optical')">👓 Optical Equipment</button>
+                <button class="hero-badge" onclick="openCart()">💬 Quotation Requests</button>
+                <button class="hero-badge" onclick="filterAndScroll('All')">🏫 Medical Schools</button>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-card-icon">🏥</div>
+            <h3>Need a quotation?</h3>
+            <p>
+                Add products to your inquiry list and send your complete requirements
+                to our WhatsApp number.
+            </p>
+            <p style="margin-top:12px; font-size:15px; font-weight:700; color:white;">
+                📞 0700 396 520
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="trust-strip">
+
+    <div class="trust-inner">
+
+        <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            <div>
+                <strong>Professional Supplies</strong>
+                <span>Healthcare equipment & supplies</span>
+            </div>
+        </div>
+
+        <div class="trust-item">
+            <div class="trust-icon">💬</div>
+            <div>
+                <strong>WhatsApp Inquiry</strong>
+                <span>Fast quotation requests</span>
+            </div>
+        </div>
+
+        <div class="trust-item">
+            <div class="trust-icon">📋</div>
+            <div>
+                <strong>Easy Selection</strong>
+                <span>Create your inquiry list</span>
+            </div>
+        </div>
+
+        <div class="trust-item">
+            <div class="trust-icon">🚚</div>
+            <div>
+                <strong>Reliable Service</strong>
+                <span>Delivery arrangements available</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<main class="catalogue">
+
+    <div class="catalogue-heading">
+
+        <div>
+            <h2>Product Catalogue</h2>
+            <p id="productCount">Loading products...</p>
+        </div>
+
+        <div class="search-box">
+            <span>🔎</span>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+        </div>
+
+    </div>
+
+
+    <div class="filters" id="filters">
+
+        <button class="filter active" data-category="All">
+            All
+        </button>
+
+        <button class="filter" data-category="Medical">
+            Medical
+        </button>
+
+        <button class="filter" data-category="Laboratory">
+            Laboratory
+        </button>
+
+        <button class="filter" data-category="Dental">
+            Dental
+        </button>
+
+        <button class="filter" data-category="Optical">
+            Optical
+        </button>
+
+        <button class="filter" data-category="Pharmaceutical">
+            Pharmaceutical
+        </button>
+
+    </div>
+
+
+    <div class="products-grid" id="productsGrid"></div>
+
+</main>
+
+
+<!-- CART -->
+
+<div class="overlay" id="cartOverlay" onclick="handleOverlay(event)">
+
+    <aside class="drawer">
+
+        <div class="drawer-header">
+
+            <h2>Your Inquiry List</h2>
+
+            <button class="close" onclick="closeCart()">×</button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="cart-empty">
+                <div>
+                    <div class="cart-empty-icon">🛍️</div>
+                    <strong>Your inquiry list is empty</strong>
+                    <p>Select products from the catalogue.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="drawer-footer">
+
+            <div class="summary">
+                <span>Total Items</span>
+                <span id="totalItems">0</span>
+            </div>
+
+            <button
+                class="checkout"
+                id="checkoutButton"
+                onclick="sendInquiry()"
+                disabled
+            >
+                💬 Send Inquiry via WhatsApp
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <h3>LENNQUIP HEALTHCARE LTD</h3>
+
+            <p>
+                Your trusted partner for medical, laboratory, dental,
+                optical and healthcare supplies.
+            </p>
+        </div>
+
+
+        <div>
+            <h3>Catalogue</h3>
+
+            <ul>
+                <li>Lennquip  Healthcare ltd</li>
+                <li>Laboratory Equipment</li>
+                <li>Dental Supplies</li>
+                <li>Optical Equipment</li>
+                <li>Pharmaceutical Products</li>
+            </ul>
+        </div>
+
+
+        <div>
+            <h3>Contact</h3>
+            <p>Phone: 0700396520</p>
+            <p>WhatsApp: 0700396520</p>
+            <p>Quotation requests welcome.</p>
+            <p>
+                <a href="https://www.facebook.com/profile.php?id=61556655207175" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </p>
+            <p>
+                <a href="https://vm.tiktok.com/ZS9knLg1tj6Th-W4rqw/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 LENNQUIP HEALTHCARE LTD. All rights reserved.
+    </div>
+
+</footer>
+
+
+<script>
+
+/* ==========================================================
+   LENNQUIP PRODUCT CATALOGUE
+
+   Product names are deliberately kept generic and accurate.
+   No brand is claimed unless the product itself is branded.
+========================================================== */
+
+const products = [
+
+    /* ================= MEDICAL ================= */
+
+    {
+        id: 1,
+        name: "Stethoscope",
+        category: "Medical",
+        description: "Professional acoustic diagnostic stethoscope.",
+        icon: "🩺",
+        image: "https://generationspace.co.ke/wp-content/uploads/2026/05/Stethoscope.jpg"
+    },
+
+    {
+        id: 2,
+        name: "Digital Blood Pressure Monitor",
+        category: "Medical",
+        description: "Digital device for non-invasive blood pressure measurement.",
+        icon: "🩺",
+        image: "https://media.istockphoto.com/id/1284089761/photo/digital-blood-pressure-monitor.jpg?s=612x612&w=0&k=20&c=MNW9aym3QThwlsQpmwq7ymT0yZpfgHn6WGeeDAcq14o="
+    },
+
+    
+        {
+        id: 3,
+        name: "Finger Pulse Oximeter",
+        category: "Medical",
+        description: "Compact fingertip device for SpO₂ and pulse-rate measurement.",
+        icon: "🩺",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmG_XGvcKsqePH0bWoAnNlR3D3Xe0hAN2Ts_SmzDK99FYaw7oz--E9yrb&s=10"
+    },
+    {
+        id: 4,
+        name: "Digital Thermometer",
+        category: "Medical",
+        description: "Digital thermometer for body-temperature measurement.",
+        icon: "🌡️",
+        image: "https://image.made-in-china.com/202f0j00qjEYmLUsYRbr/Fever-Alarm-Digital-Thermometer-for-Body-Temperature-Test.webp"
+    },
+
+    {
+        id: 5,
+        name: "Glucometer",
+        category: "Medical",
+        description: "Blood glucose monitoring device for personal or clinical use.",
+        icon: "🩸",
+        image: "https://m.media-amazon.com/images/I/61vQYB662CL.jpg"
+    },
+
+    {
+        id: 6,
+        name: "Nebulizer",
+        category: "Medical",
+        description: "Nebulizer equipment designed to deliver medication as an inhaled mist.",
+        icon: "💨",
+        image: "https://www.news-medical.net/image-handler/picture/2020/7/shutterstock_621845186.jpg"
+    },
+
+    {
+        id: 7,
+        name: "Examination Gloves",
+        category: "Medical",
+        description: "Disposable protective gloves for clinical and examination procedures.",
+        icon: "🧤",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe1Vq1lodaKuQiExIAISFE2-ZDBLcmsBDZvm8z68UOz7bYQBE9Z6s7ug&s=10"
+    },
+
+    {
+        id: 8,
+        name: "Surgical Face Masks",
+        category: "Medical",
+        description: "Disposable protective face masks for healthcare environments.",
+        icon: "😷",
+        image: "https://t3.ftcdn.net/jpg/03/23/01/74/360_F_323017406_F5wKOblmG7Iyx0Y2Py3cvdeWUZ5cNAQT.jpg"
+    },
+
+    {
+        id: 9,
+        name: "Disposable Syringes",
+        category: "Medical",
+        description: "Sterile disposable syringes for clinical applications.",
+        icon: "💉",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkHsgi5QFAWAI3CwTL28Uq9Cyr0SNZwJ9Z9z-qkkn8Qsh29xyr8Q6syi6i&s=10"
+    },
+
+    {
+        id: 10,
+        name: "First Aid Kit",
+        category: "Medical",
+        description: "First-aid supplies assembled for emergency and routine care.",
+        icon: "🩹",
+        image: "https://insights.ibx.com/wp-content/uploads/2019/06/first-aid-kit-screenshot.png"
+    },
+
+
+    /* ================= LABORATORY ================= */
+
+    {
+        id: 11,
+        name: "Binocular Microscope",
+        category: "Laboratory",
+        description: "Laboratory optical microscope for specimen examination.",
+        icon: "🔬",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpF1-hGfMFtCVinuNazyQNroTpWL9yetL1TlByQaXoU-piNbw0E0obuHPD&s=10"
+    },
+
+    {
+        id: 12,
+        name: "Laboratory Centrifuge",
+        category: "Laboratory",
+        description: "Laboratory centrifuge for separating components of samples.",
+        icon: "⚙️",
+        image: "https://4.imimg.com/data4/LF/OW/MY-3726581/laboratory-centrifuge.jpg"
+    },
+
+    {
+        id: 13,
+        name: "Micropipette",
+        category: "Laboratory",
+        description: "Precision laboratory pipette for handling small liquid volumes.",
+        icon: "🧪",
+        image: "https://www.microlit.us/wp-content/uploads/2019/02/rbo-1.png"
+    },
+
+    {
+        id: 14,
+        name: "Petri Dish",
+        category: "Laboratory",
+        description: "Laboratory dish used for culture and specimen work.",
+        icon: "🧫",
+        image: "https://5.imimg.com/data5/ANDROID/Default/2020/9/LG/OW/TO/2305891/product-jpeg-500x500.jpg"
+    },
+
+    {
+        id: 15,
+        name: "Laboratory Test Tubes",
+        category: "Laboratory",
+        description: "Glass laboratory tubes for sample handling and testing.",
+        icon: "🧪",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWigckGF2hveTg5Bxg4d3dTQ4FZrIw6Ef9rYeoh-7TEQ&s"
+    },
+
+    {
+        id: 16,
+        name: "Microscope Slides",
+        category: "Laboratory",
+        description: "Glass slides used for microscopic specimen preparation.",
+        icon: "🔬",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1M9pSjNHrgH38VCoS1ac6m6y7ZCS0Urh-1XYArgCXoFsjEMXJeNEP6Oh&s=10"
+    },
+
+    {
+        id: 17,
+        name: "Laboratory Beaker",
+        category: "Laboratory",
+        description: "Glass laboratory vessel for holding and mixing liquids.",
+        icon: "🧪",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Glassware-_Beaker.jpg/250px-Glassware-_Beaker.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+
+    {
+        id: 18,
+        name: "Laboratory Flask",
+        category: "Laboratory",
+        description: "Laboratory glass flask for preparation and handling of liquids.",
+        icon: "⚗️",
+        image: "https://www.scientificglassservices.co.uk/wp-content/uploads/2020/10/erlenmeyer-flask.jpg"
+    },
+
+    {
+        id: 19,
+        name: "Burette",
+        category: "Laboratory",
+        description: "Graduated laboratory instrument used for controlled liquid dispensing.",
+        icon: "🧪",
+        image: "https://glasscolabs.com/wp-content/uploads/2025/11/what-is-a-burette.jpg"
+    },
+
+    {
+        id: 20,
+        name: "Laboratory Safety Goggles",
+        category: "Laboratory",
+        description: "Protective eyewear for laboratory environments.",
+        icon: "🥽",
+        image: "https://s7d1.scene7.com/is/image/CENODS/09833-feature3-mono?$responsive$&wid=700&qlt=90,0&resMode=sharp2"
+    },
+
+
+    /* ================= DENTAL ================= */
+
+    {
+        id: 21,
+        name: "Dental Mirror",
+        category: "Dental",
+        description: "Dental examination mirror for intraoral inspection.",
+        icon: "🦷",
+        image: "https://m.media-amazon.com/images/I/51BINhcsGCL.jpg"
+    },
+
+    
+    {
+        id: 22,
+        name: "Dental Probe",
+        category: "Dental",
+        description: "Dental examination instrument for clinical inspection.",
+        icon: "🦷",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dental_probe.jpg"
+    },
+
+    {
+        id: 24,
+        name: "Dental Impression Tray",
+        category: "Dental",
+        description: "Tray used for dental impression procedures.",
+        icon: "🦷",
+        image: "https://thumbs.dreamstime.com/b/gloved-hand-holding-dental-impression-trays-close-up-three-different-sized-plastic-used-making-teeth-molds-dentistry-431722983.jpg"
+    },
+
+    {
+        id: 25,
+        name: "Dental Suction Tips",
+        category: "Dental",
+        description: "Disposable suction tips used during dental procedures.",
+        icon: "🦷",
+        image: "https://media.printables.com/media/prints/8bb27708-56c7-4436-b704-d0da4b954eef/images/10885656_79ee63aa-c43e-4933-9e9a-161ff4b1b4f7_fb57a499-5864-451a-af9d-a8dc127fe31f/thumbs/inside/1280x960/jpg/20251013_172556.webp"
+    },
+
+    {
+        id: 23,
+        name: "Dental Chair",
+        category: "Dental",
+        description: "Professional dental treatment chair with adjustable positioning for clinical procedures.",
+        icon: "🦷",
+        image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80"
+    },
+
+    /* ================= OPTICAL ================= */
+
+    {
+        id: 26,
+        name: "Trial Lens Frame",
+        category: "Optical",
+        description: "Adjustable frame used for ophthalmic refraction testing.",
+        icon: "👓",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Optical_Trial_Lens_Frame.jpg"
+    },
+
+    {
+        id: 27,
+        name: "Vision Testing Chart",
+        category: "Optical",
+        description: "Visual acuity chart used for eye examinations.",
+        icon: "👁️",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Snellen_chart.svg"
+    },
+
+    {
+        id: 28,
+        name: "Contact Lens Case",
+        category: "Optical",
+        description: "Protective storage case for contact lenses.",
+        icon: "👁️",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Contact_lens_case.jpg"
+    },
+
+    {
+        id: 29,
+        name: "Lens Cleaning Cloth",
+        category: "Optical",
+        description: "Soft cleaning cloth for optical lenses and eyewear.",
+        icon: "👓",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Microfiber_cloth.jpg"
+    },
+
+    {
+        id: 30,
+        name: "Optical Trial Lens Set",
+        category: "Optical",
+        description: "Set of trial lenses used for refractive assessment.",
+        icon: "👓",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Trial_lenses.jpg"
+    },
+
+
+    /* ================= PHARMACEUTICAL ================= */
+
+    {
+        id: 31,
+        name: "Medicine Storage Containers",
+        category: "Pharmaceutical",
+        description: "Storage containers suitable for organized pharmaceutical supplies.",
+        icon: "💊",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pill_bottles.jpg"
+    },
+
+    {
+        id: 32,
+        name: "Tablet Containers",
+        category: "Pharmaceutical",
+        description: "Containers used for organized storage of tablet products.",
+        icon: "💊",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Medicine_bottles.jpg"
+    },
+
+    {
+        id: 33,
+        name: "Pharmaceutical Measuring Cup",
+        category: "Pharmaceutical",
+        description: "Graduated cup for measuring liquid medicines.",
+        icon: "🥤",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Medicine_cup.jpg"
+    },
+
+    {
+        id: 34,
+        name: "Medicine Dropper",
+        category: "Pharmaceutical",
+        description: "Dropper for controlled dispensing of liquid preparations.",
+        icon: "💧",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Medicine_dropper.jpg"
+    },
+
+    {
+        id: 35,
+        name: "Pill Organizer",
+        category: "Pharmaceutical",
+        description: "Compartment organizer for managing tablet storage.",
+        icon: "💊",
+        image: "https://media.istockphoto.com/id/2138854504/photo/hand-placing-pills-into-weekly-pill-dispenser-of-medication-on-gray-background.jpg?s=612x612&w=0&k=20&c=8zlooxlKC79Izx0PxcyqKv9qGL2_g-5bpAx4RPtD_oo="
+    }
+
+];
+
+
+/* ==========================================================
+   STATE
+========================================================== */
+
+let activeCategory = "All";
+let searchTerm = "";
+
+let inquiryCart =
+    JSON.parse(localStorage.getItem("lennquip_inquiry_cart")) || [];
+
+
+/* ==========================================================
+   IMAGE FALLBACK
+========================================================== */
+
+function createFallback(product) {
+
+    const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="800"
+             height="600"
+             viewBox="0 0 800 600">
+
+            <defs>
+                <linearGradient id="g"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
+                    <stop offset="0%" stop-color="#eaf7fb"/>
+                    <stop offset="100%" stop-color="#dceff5"/>
+                </linearGradient>
+            </defs>
+
+            <rect width="800"
+                  height="600"
+                  fill="url(#g)"/>
+
+            <circle
+                cx="400"
+                cy="235"
+                r="95"
+                fill="#ffffff"
+                opacity=".9"/>
+
+            <text
+                x="400"
+                y="255"
+                text-anchor="middle"
+                font-size="75">
+                ${product.icon}
+            </text>
+
+            <text
+                x="400"
+                y="385"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="30"
+                font-weight="700"
+                fill="#075985">
+                ${escapeHtml(product.name)}
+            </text>
+
+            <text
+                x="400"
+                y="425"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="17"
+                fill="#64748b">
+                LennQuip Medical Supplies
+            </text>
+
+        </svg>
+    `;
+
+    return "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(svg);
+}
+
+
+/* ==========================================================
+   SECURITY / TEXT ESCAPING
+========================================================== */
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+/* ==========================================================
+   RENDER PRODUCTS
+========================================================== */
+
+function getFilteredProducts() {
+
+    return products.filter(product => {
+
+        const matchesCategory =
+            activeCategory === "All" ||
+            product.category === activeCategory;
+
+        const searchable =
+            (
+                product.name +
+                " " +
+                product.category +
+                " " +
+                product.description
+            ).toLowerCase();
+
+        const matchesSearch =
+            searchable.includes(searchTerm.toLowerCase());
+
+        return matchesCategory && matchesSearch;
+
+    });
+}
+
+
+function renderProducts() {
+
+    const grid = document.getElementById("productsGrid");
+
+    const filtered = getFilteredProducts();
+
+    document.getElementById("productCount").textContent =
+        `${filtered.length} product${filtered.length === 1 ? "" : "s"} available`;
+
+    if (!filtered.length) {
+
+        grid.innerHTML = `
+            <div class="empty">
+                <div>🔎</div>
+                <h3>No products found</h3>
+                <p>Try another product name or category.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    grid.innerHTML = filtered.map(product => {
+
+        const message =
+            `Hello LennQuip Medical Supplies, I would like to inquire about ${product.name}. Please provide availability and quotation.`;
+
+        const whatsapp =
+            `https://wa.me/254700396520?text=${encodeURIComponent(message)}`;
+
+
+        return `
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="category">
+                        ${escapeHtml(product.category)}
+                    </span>
+
+                    <img
+                        src="${product.image}"
+                        alt="${escapeHtml(product.name)}"
+                        loading="lazy"
+                        onerror="this.onerror=null; this.src=createFallback(products.find(p => p.id === ${product.id}));"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3>
+                        ${escapeHtml(product.name)}
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(product.description)}
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="btn btn-inquiry"
+                            onclick="addToCart(${product.id})">
+                            + Add to Inquiry List
+                        </button>
+
+
+                        <a
+                            class="btn btn-whatsapp"
+                            href="${whatsapp}"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            💬 Quick WhatsApp Inquiry
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        `;
+
+    }).join("");
+
+}
+
+
+/* ==========================================================
+   FILTERS
+========================================================== */
+
+document.querySelectorAll(".filter").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document
+            .querySelectorAll(".filter")
+            .forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        activeCategory =
+            button.dataset.category;
+
+        renderProducts();
+
+    });
+
+});
+
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+document
+    .getElementById("searchInput")
+    .addEventListener("input", event => {
+
+        searchTerm =
+            event.target.value.trim();
+
+        renderProducts();
+
+    });
+
+
+/* ==========================================================
+   CART
+========================================================== */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "lennquip_inquiry_cart",
+        JSON.stringify(inquiryCart)
+    );
+
+}
+
+
+function addToCart(productId) {
+
+    const product =
+        products.find(p => p.id === productId);
+
+    if (!product) return;
+
+
+    const existing =
+        inquiryCart.find(item => item.id === productId);
+
+
+    if (existing) {
+
+        existing.quantity += 1;
+
+    } else {
+
+        inquiryCart.push({
+            ...product,
+            quantity: 1
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+    openCart();
+
+}
+
+
+function changeQuantity(productId, change) {
+
+    const item =
+        inquiryCart.find(item => item.id === productId);
+
+    if (!item) return;
+
+
+    item.quantity += change;
+
+
+    if (item.quantity <= 0) {
+
+        inquiryCart =
+            inquiryCart.filter(
+                item => item.id !== productId
+            );
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+function removeFromCart(productId) {
+
+    inquiryCart =
+        inquiryCart.filter(
+            item => item.id !== productId
+        );
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* ==========================================================
+   CART RENDER
+========================================================== */
+
+function updateCart() {
+
+    const cartCount =
+        inquiryCart.reduce(
+            (sum, item) => sum + item.quantity,
+            0
+        );
+
+
+    const countElement =
+        document.getElementById("cartCount");
+
+
+    if (cartCount > 0) {
+
+        countElement.textContent = cartCount;
+
+        countElement.style.display = "flex";
+
+    } else {
+
+        countElement.style.display = "none";
+
+    }
+
+
+    document.getElementById("totalItems").textContent =
+        cartCount;
+
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    const checkout =
+        document.getElementById("checkoutButton");
+
+
+    checkout.disabled =
+        inquiryCart.length === 0;
+
+
+    if (!inquiryCart.length) {
+
+        container.innerHTML = `
+
+            <div class="cart-empty">
+
+                <div>
+
+                    <div class="cart-empty-icon">
+                        🛍️
+                    </div>
+
+                    <strong>
+                        Your inquiry list is empty
+                    </strong>
+
+                    <p>
+                        Select products from the catalogue.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        inquiryCart.map(item => `
+
+            <div class="cart-row">
+
+                <img
+                    src="${item.image}"
+                    alt="${escapeHtml(item.name)}"
+                    onerror="this.onerror=null; this.src=createFallback(products.find(p => p.id === ${item.id}));"
+                >
+
+
+                <div>
+
+                    <h4>
+                        ${escapeHtml(item.name)}
+                    </h4>
+
+                    <div class="qty">
+
+                        <button
+                            onclick="changeQuantity(${item.id}, -1)">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity(${item.id}, 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="delete"
+                    onclick="removeFromCart(${item.id})"
+                    aria-label="Remove product">
+                    🗑
+                </button>
+
+            </div>
+
+        `).join("");
+
+}
+
+
+/* ==========================================================
+   CART OPEN/CLOSE
+========================================================== */
+
+function openCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("open");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("open");
+
+    document.body.style.overflow = "";
+
+}
+
+
+function handleOverlay(event) {
+
+    if (
+        event.target ===
+        document.getElementById("cartOverlay")
+    ) {
+
+        closeCart();
+
+    }
+
+}
+
+
+/* ==========================================================
+   WHATSAPP CHECKOUT
+========================================================== */
+
+function sendInquiry() {
+
+    if (!inquiryCart.length) return;
+
+
+    let message =
+        "Hello LennQuip Medical Supplies,%0A%0A" +
+        "I would like to request a quotation for the following products:%0A%0A";
+
+
+    inquiryCart.forEach((item, index) => {
+
+        message +=
+            `${index + 1}. ${item.name}%0A` +
+            `Category: ${item.category}%0A` +
+            `Quantity: ${item.quantity}%0A%0A`;
+
+    });
+
+
+    message +=
+        "Please confirm availability, pricing and delivery options.%0A%0A" +
+        "Thank you.";
+
+
+    window.open(
+        `https://wa.me/254700396520?text=${message}`,
+        "_blank"
+    );
+
+}
+
+
+/* ==========================================================
+   HERO BADGE NAVIGATION
+========================================================== */
+
+function filterAndScroll(category) {
+
+    activeCategory = category;
+
+    document.querySelectorAll(".filter").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === category);
+    });
+
+    renderProducts();
+
+    document.querySelector(".catalogue").scrollIntoView({ behavior: "smooth" });
+
+}
+
+
+/* ==========================================================
+   ESC KEY
+========================================================== */
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+        closeCart();
+
+    }
+
+});
+
+
+/* ==========================================================
+   INITIALIZE
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    renderProducts();
+
+    updateCart();
+
+});
+
+</script>
+
+</body>
+</html>
